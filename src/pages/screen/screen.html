@@ -1,0 +1,333 @@
+<!--<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <button ion-button navPop icon-only>
+        <i class="fa fa-angle-left fa-2x" aria-hidden="true"></i>
+      </button>
+    </ion-buttons>
+    <ion-title>Screen</ion-title>
+    <ion-label end>{{counter}}/13</ion-label>
+  </ion-toolbar>
+</ion-header>!-->
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Screen</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-label text-right *ngIf="counter < 14">{{counter}}/13</ion-label>
+  <div *ngIf="counter == 1">
+    <ion-list radio-group>
+      <ion-list-header>
+        <h1 style="text-align: center;">แขน ขา อ่อนแรง</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>ใช่</ion-label>
+        <ion-radio value="1" (click)="selectedAnswer('ใช่')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+        <ion-radio value="2" (click)="selectedAnswer('ไม่ใช่')"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="counter == 2">
+    <ion-list radio-group>
+      <ion-list-header>
+        <h1 style="text-align: center;">แขน ขา ชา</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>ใช่</ion-label>
+        <ion-radio value="1" (click)="selectedAnswer('ใช่')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+        <ion-radio value="2" (click)="selectedAnswer('ไม่ใช่')"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="counter == 3">
+    <ion-list radio-group>
+      <ion-list-header>
+        <h1 style="text-align: center;">หน้าเบี้ยว</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>ใช่</ion-label>
+        <ion-radio value="1" (click)="selectedAnswer('ใช่')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+        <ion-radio value="2" (click)="selectedAnswer('ไม่ใช่')"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="counter == 4">
+    <ion-list radio-group>
+      <ion-list-header>
+        <h1 style="text-align: center;">เดินเซ</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>ใช่</ion-label>
+        <ion-radio value="1" (click)="selectedAnswer('ใช่')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+        <ion-radio value="2" (click)="selectedAnswer('ไม่ใช่')"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="counter == 5">
+    <ion-list radio-group>
+      <ion-list-header>
+        <h1 style="text-align: center;">การพูด</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>พูดไม่ชัด</ion-label>
+        <ion-radio value="1" (click)="selectedAnswer('พูดไม่ชัด')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ลิ้นแข็ง</ion-label>
+        <ion-radio value="2" (click)="selectedAnswer('ลิ้นแข็ง')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>เสียงเปลี่ยน</ion-label>
+        <ion-radio value="3" (click)="selectedAnswer('เสียงเปลี่ยน')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>พูดไม่ได้</ion-label>
+        <ion-radio value="4" (click)="selectedAnswer('พูดไม่ได้')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ไม่เข้าใจ</ion-label>
+        <ion-radio value="5" (click)="selectedAnswer('ไม่เข้าใจ')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>พูดติดขัด</ion-label>
+        <ion-radio value="6" (click)="selectedAnswer('พูดติดขัด')"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="counter == 6">
+    <ion-list radio-group>
+      <ion-list-header>
+        <h1 style="text-align: center;">การมองเห็น</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>ตามัว</ion-label>
+        <ion-radio value="1" (click)="selectedAnswer('ตามัว')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ตาบอด</ion-label>
+        <ion-radio value="2" (click)="selectedAnswer('ตาบอด')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>เห็นภาพซ้อน แนวราบ</ion-label>
+        <ion-radio value="3" (click)="selectedAnswer('เห็นภาพซ้อน แนวราบ')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>เห็นภาพซ้อน แนวดิ่ง</ion-label>
+        <ion-radio value="4" (click)="selectedAnswer('เห็นภาพซ้อน แนวดิ่ง')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ภาพส่าย</ion-label>
+        <ion-radio value="5" (click)="selectedAnswer('ภาพส่าย')"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="counter == 7">
+    <ion-list radio-group>
+      <ion-list-header>
+        <h1 style="text-align: center;">ง่วงซึม</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>ใช่</ion-label>
+        <ion-radio value="1" (click)="selectedAnswer('ใช่')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+        <ion-radio value="2" (click)="selectedAnswer('ไม่ใช่')"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="counter == 8">
+    <ion-list radio-group>
+      <ion-list-header>
+        <h1 style="text-align: center;">ปวดหัว</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>ข้างซ้าย</ion-label>
+        <ion-radio value="1" (click)="selectedAnswer('ข้างซ้าย')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ข้างขวา</ion-label>
+        <ion-radio value="2" (click)="selectedAnswer('ข้างขวา')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ขมับ</ion-label>
+        <ion-radio value="3" (click)="selectedAnswer('ขมับ')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ท้ายทอย</ion-label>
+        <ion-radio value="4" (click)="selectedAnswer('ท้ายทอย')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>กลางกระหม่อม</ion-label>
+        <ion-radio value="5" (click)="selectedAnswer('กลางกระหม่อม')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ทั้งหัว</ion-label>
+        <ion-radio value="6" (click)="selectedAnswer('ทั้งหัว')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ต้นคอ</ion-label>
+        <ion-radio value="7" (click)="selectedAnswer('ต้นคอ')"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="counter == 9">
+    <ion-list radio-group>
+      <ion-list-header>
+        <h1 style="text-align: center;">ชัก</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>เกร็งกระตุก หน้า แขน ขา</ion-label>
+        <ion-radio value="1" (click)="selectedAnswer('เกร็งกระตุก หน้า แขน ขา')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ไม่รู้สึกตัว</ion-label>
+        <ion-radio value="2" (click)="selectedAnswer('ไม่รู้สึกตัว')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ตาเหลือก</ion-label>
+        <ion-radio value="3" (click)="selectedAnswer('ตาเหลือก')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ตาค้าง</ion-label>
+        <ion-radio value="4" (click)="selectedAnswer('ตาค้าง')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>อุจจาระหรือปัสสาวะ</ion-label>
+        <ion-radio value="5" (click)="selectedAnswer('อุจจาระหรือปัสสาวะ')"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="counter == 10">
+    <ion-list radio-group>
+      <ion-list-header>
+        <h1 style="text-align: center;">เวียนหัว</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>ใช่</ion-label>
+        <ion-radio value="1" (click)="selectedAnswer('ใช่')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+        <ion-radio value="2" (click)="selectedAnswer('ไม่ใช่')"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="counter == 11">
+    <ion-list radio-group>
+      <ion-list-header>
+        <h1 style="text-align: center;">คลื่นไส้ อาเจียน</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>คลื่นไส้ไม่อาเจียน</ion-label>
+        <ion-radio value="1" (click)="selectedAnswer('คลื่นไส้ไม่อาเจียน')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>คลื่นไส้อาเจียน</ion-label>
+        <ion-radio value="2" (click)="selectedAnswer('คลื่นไส้อาเจียน')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>อาเจียนพุ่ง</ion-label>
+        <ion-radio value="3" (click)="selectedAnswer('อาเจียนพุ่ง')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ปวดท้อง ถ่ายเหลว</ion-label>
+        <ion-radio value="4" (click)="selectedAnswer('ปวดท้อง ถ่ายเหลว')"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="counter == 12">
+    <ion-list radio-group>
+      <ion-list-header>
+        <h1 style="text-align: center;">สับสน</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>ใช่</ion-label>
+        <ion-radio value="1" (click)="selectedAnswer('ใช่')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+        <ion-radio value="2" (click)="selectedAnswer('ไม่ใช่')"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="counter == 13">
+    <ion-list radio-group>
+      <ion-list-header>
+        <h1 style="text-align: center;">ไข้ ตัวร้อน</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>ใช่</ion-label>
+        <ion-radio value="1" (click)="selectedAnswer('ใช่')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>ไม่ใช่</ion-label>
+        <ion-radio value="2" (click)="selectedAnswer('ไม่ใช่')"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="counter == 14">
+    <ion-list radio-group>
+      <ion-list-header>
+        <h1 style="text-align: center;">ผลลัพธ์</h1>
+      </ion-list-header>
+      <ion-item>
+        <!--<ion-label>
+          <h1>{{answer}}</h1>
+        </ion-label>!-->
+        <ul *ngFor="let item of result; let rn = index">
+          <li>{{rn+1}}.) {{item.question}} </li>
+          <li>
+            <u>ตอบ</u> {{item.answer}}</li>
+        </ul>
+      </ion-item>
+      <ion-item style="text-align: center;">
+        <button ion-button color="secondary" outline (click)="reset()">คัดกรองใหม่</button>
+      </ion-item>
+      <ion-item style="text-align: center;">
+        <button ion-button color="danger" outline (click)="ambulance('tel:1669')">เรียกรถพยาบาล</button>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <ion-fab left bottom *ngIf="counter > 1 && counter != 14">
+    <button ion-fab color="red" (click)="back()"><ion-icon name="arrow-dropleft"></ion-icon></button>
+  </ion-fab>
+
+  <ion-fab right bottom *ngIf="counter < 13">
+    <button ion-fab color="red" (click)="next()"><ion-icon name="arrow-dropright"></ion-icon></button>
+  </ion-fab>
+
+  <ion-fab right bottom *ngIf="counter > 12 && counter != 14">
+    <button ion-fab color="red" (click)="process()"><ion-icon name="body"></ion-icon></button>
+  </ion-fab>
+</ion-content>

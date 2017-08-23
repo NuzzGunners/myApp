@@ -1,13 +1,10 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
     <ion-title>List</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<!--<ion-content>
   <ion-list>
     <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
       <ion-icon [name]="item.icon" item-left></ion-icon>
@@ -20,4 +17,16 @@
   <div *ngIf="selectedItem" padding>
     You navigated here from <b>{{selectedItem.title}}</b>
   </div>
+</ion-content>!-->
+
+<ion-content>
+   
+    <ion-fab bottom right #fab>
+        <button ion-fab>Share</button>
+        <ion-fab-list side="top">
+          <button ion-fab (click)="share('facebook', fab)">Facebook</button>
+          <button ion-fab (click)="share('twitter', fab)">Twitter</button>
+        </ion-fab-list>
+      </ion-fab>
+
 </ion-content>
